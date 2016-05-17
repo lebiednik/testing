@@ -2,6 +2,7 @@ import sys
 import os
 import collections
 import re
+from IPy import IP
 
 def running():
     list1 = ('b', 'a', 'b', 'a', 'b', 'c', 'd', 'e', 'e', 'a', 'g')
@@ -58,5 +59,15 @@ def running():
     print dict2['http://no.shvoong.com/exact-sciences/chemistry/chemical-physics/']
     print dict2['http://www2.math.uic.edu/~jan/Demo/quadgrid.html']
 
+def ip_test():
+    ip = IP('127.0.0.0/30')
+    print ip.iptype()
+    ip = IP('93.100.17.6')
+    print ip, ip.iptype()
+    ip = IP('192.168.1.255')
+    print ip, ip.iptype()
+
+
 if __name__ == '__main__':
-    running()
+    #running()
+    ip_test()
