@@ -1,0 +1,57 @@
+44  sudo add-apt-repository ppa:webupd8team/atom
+45  sudo apt-get update
+46  sudo apt-get install atom
+installing atom
+
+84  sudo apt-get install git
+104  git config --global user.email "brian.lebiednik@gmail.com"
+
+
+131  git clone https://blebiednik3@scm.ctisl.gtri.gatech.edu/git/scm/ap/web-api.git
+
+140  sudo pip install click
+141  sudo pip install --upgrade pip
+
+
+144  sudo pip install werkzeug
+
+146  sudo pip install flask
+
+148  sudo pip install flask.ext.kvsession
+149  sudo pip install flask
+
+151  sudo pip install --upgrade flask
+
+153  sudo pip install flask-httpauth
+154  sudo pip install flask-kvsession
+
+156  sudo pip install flask-marshmallow
+
+159  git clone https://blebiednik3@scm.ctisl.gtri.gatech.edu/git/scm/ap/ryan-result.git
+
+
+
+198  sudo pip install ipwhois
+
+
+202  sudo pip install pprintpp
+205  sudo apt install whois
+209  pip install dnspython
+210  sudo pip install ipaddr
+211  sudo pip install --upgrade ipwhois
+
+214  git clone https://blebiednik3@scm.ctisl.gtri.gatech.edu/git/scm/me/parse_pcap.git
+
+292  sudo pip install ipaddress
+
+294  sudo pip install dpkt
+
+296  sudo pip install pytest
+
+
+385  git clone https://blebiednik3@scm.ctisl.gtri.gatech.edu/git/scm/av/pcap2har.git
+386  cd pcap2har/
+390  git checkout testing
+394  git branch
+395  sudo python setup.py
+396  sudo python setup.py install
