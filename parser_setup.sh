@@ -5,3 +5,5 @@ sudo pip install ipaddress
 git clone https://blebiednik3@scm.ctisl.gtri.gatech.edu/git/scm/av/pcap2har.git
 git checkout testing
 sudo python setup.py install
+sudo pip install blinker
+sudo pip install urllib3
