@@ -3,6 +3,7 @@ import socket
 import collections
 from ipwhois import IPWhois
 from pprint import pprint
+import datetime
 
 try:
     conn=pymongo.MongoClient()
@@ -13,17 +14,28 @@ except pymongo.errors.ConnectionFailure, e:
 db = conn.dns_ip_db
 url_ip_coll = db.url_ip_coll
 dns_dict = collections.Counter()
-for ip in url_ip_coll.find({'DNS':'Null', 'Attribute': 'PUBLIC'}):
+time2 = datetime.datetime.now() -datetime.timedelta(days=7)
+for ip in url_ip_coll.find({'DNS':'Null', 'Attribute': 'PUBLIC', "date": {"$gt": time2}}):
     dns_dict[ip['IP']] += ip['seen']
-for k, v in dns_dict.most_common(10):
+    #obj = IPWhois(str(ip['IP']))
+    #results = obj.lookup_rdap(depth=1)
+
+    #sec_result = results['network']
+    #print sec_result['name']
+    #try
+for k, v in dns_dict.most_common(20):
     print '%s: %i' %(k,v)
-    """try:
-        print socket.gethostbyaddr(str(k))
-    except:
-        print ip['IP']
-    """#try:
+
     obj = IPWhois(str(k))
     results = obj.lookup_rdap(depth=1)
-    print results['asn_country_code'], results['asn_registry']
+    sec_result = results['network']
+    print results['asn_country_code'], results['asn_registry'], sec_result['name']
+    try:
+        addr = socket.gethostbyaddr(str(k))
+        print addr, addr[0]
+    except:
+        print 'Unknown host'
+
+
     #except:
     #    print "IPWhois Failed"

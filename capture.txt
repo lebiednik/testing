@@ -1,0 +1,10 @@
+Timestamp: 2016-04-27 14:35:43.817656 
+('Ethernet Frame: ', '00:4f:49:22:33:03', '33:33:ff:5d:d8:2b', 34525)Non IP Packet type not supported IP6
+Timestamp: 2016-04-27 14:35:43.817804 
+('Ethernet Frame: ', '00:4f:49:22:33:03', '33:33:00:00:00:02', 34525)Non IP Packet type not supported IP6
+Timestamp: 2016-04-27 14:35:43.817903 
+('Ethernet Frame: ', '00:4f:49:22:33:03', '33:33:00:00:00:16', 34525)Non IP Packet type not supported IP6
+Timestamp: 2016-04-27 14:35:44.315546 
+('Ethernet Frame: ', '00:4f:49:22:33:03', '33:33:00:00:00:16', 34525)Non IP Packet type not supported IP6
+Timestamp: 2016-04-27 14:35:45.594458 
+('Ethernet Frame: ', '00:4f:49:22:33:03', 'ff:ff:ff:ff:ff:ff', 2048)
